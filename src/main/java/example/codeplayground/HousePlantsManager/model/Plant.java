@@ -17,16 +17,18 @@ public class Plant implements Serializable {
     private String commonName;
     private String imageUrl;
     private Long descriptionYear;
+    private String plantCode;
 
     public Plant() {}
 
-    public Plant(String family, String genus, String binomialName, String commonName, String imageUrl, Long descriptionYear) {
+    public Plant(String family, String genus, String binomialName, String commonName, String imageUrl, Long descriptionYear, String plantCode) {
         this.family = family;
         this.genus = genus;
         this.binomialName = binomialName;
         this.commonName = commonName;
         this.imageUrl = imageUrl;
         this.descriptionYear = descriptionYear;
+        this.plantCode = plantCode;
     }
     
     public Long getId() {
@@ -85,6 +87,14 @@ public class Plant implements Serializable {
         this.descriptionYear = descriptionYear;
     }
 
+    public String getPlantCode() {
+        return plantCode;
+    }
+
+    public void setPlantCode(String plantCode) {
+        this.plantCode = plantCode;
+    }
+
     @Override // to see in the console
     public String toString() {
         return "Plant {" +
@@ -95,6 +105,7 @@ public class Plant implements Serializable {
                 ", common name = " + commonName + '\'' +
                 ", image url = " + imageUrl + '\'' +
                 ", description year = " + descriptionYear + '\'' +
+                ", plant code = " + plantCode + '\'' +
                 '}';
     }
 }
