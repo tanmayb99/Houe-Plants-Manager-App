@@ -29,7 +29,7 @@ public class PlantResourceController {
         return new ResponseEntity<>(plant, HttpStatus.OK);
     }
 
-    @PatchMapping("/add")
+    @PostMapping("/add")
     public ResponseEntity<Plant> addPlant(@RequestBody Plant plant) {
         Plant newPlant = plantService.addPlant(plant);
         return new ResponseEntity<>(newPlant, HttpStatus.CREATED);
@@ -42,7 +42,7 @@ public class PlantResourceController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Plant> deletePlant(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deletePlant(@PathVariable("id") Long id) {
         plantService.deletePlant(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
