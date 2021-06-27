@@ -85,7 +85,7 @@ public class Plant implements Serializable {
         this.descriptionYear = descriptionYear;
     }
 
-    @Override
+    @Override // to see in the console
     public String toString() {
         return "Plant {" +
                 "id = " + id +
