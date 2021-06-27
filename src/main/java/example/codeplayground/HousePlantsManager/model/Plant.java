@@ -13,8 +13,88 @@ public class Plant implements Serializable {
     private Long id;
     private String family;
     private String genus;
-    private String binomial_name;
-    private String common_name;
+    private String binomialName;
+    private String commonName;
     private String imageUrl;
-    private String description_year;
+    private Long descriptionYear;
+
+    public Plant() {}
+
+    public Plant(String family, String genus, String binomialName, String commonName, String imageUrl, Long descriptionYear) {
+        this.family = family;
+        this.genus = genus;
+        this.binomialName = binomialName;
+        this.commonName = commonName;
+        this.imageUrl = imageUrl;
+        this.descriptionYear = descriptionYear;
+    }
+    
+    public Long getId() {
+        return id;
+    }
+    
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
+    public String getFamily() {
+        return family;
+    }
+    
+    public void setFamily(String family) {
+        this.family = family;
+    }
+    
+    public String getGenus() {
+        return genus;
+    }
+
+    public void setGenus(String genus) {
+        this.genus = genus;
+    }
+
+    public String getBinomialName() {
+        return binomialName;
+    }
+
+    public void setBinomialName(String binomialName) {
+        this.family = binomialName;
+    }
+
+    public String getCommonName() {
+        return commonName;
+    }
+
+    public void setCommonName(String commonName) {
+        this.commonName = commonName;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public Long getDescriptionYear() {
+        return descriptionYear;
+    }
+
+    public void setDescriptionYear(Long descriptionYear) {
+        this.descriptionYear = descriptionYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Plant {" +
+                "id = " + id +
+                ", family = " + family + '\'' +
+                ", genus = " + genus + '\'' +
+                ", binomial name = " + binomialName + '\'' +
+                ", common name = " + commonName + '\'' +
+                ", image url = " + imageUrl + '\'' +
+                ", description year = " + descriptionYear + '\'' +
+                '}';
+    }
 }
