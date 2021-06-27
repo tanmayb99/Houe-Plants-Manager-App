@@ -19,7 +19,7 @@ public class PlantService {
     }
 
     public Plant addPlant(Plant plant) {
-        plant.setPlantCode(UUID.randomUUID().toString())
+        plant.setPlantCode(UUID.randomUUID().toString());
         return plantRepository.save(plant);
     }
 
